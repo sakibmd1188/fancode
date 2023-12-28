@@ -1,0 +1,35 @@
+.genre-container {
+    max-width: 95vw;
+    margin: 0 auto;
+}
+
+.genre-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 6px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    padding-right: 20px; /* Add some extra padding to ensure the last button is fully visible */
+    justify-content: flex-start; /* Ensure buttons are aligned to the start */
+    align-items: stretch; /* Buttons will occupy full space */
+}
+
+.genre-list::-webkit-scrollbar {
+    display: none;
+}
+
+.genre-button {
+    flex: 0 0 auto; /* Allow button size to grow or shrink */
+    padding: 8px 16px;
+    border: none;
+    background-color: #eee;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    min-width: 120px;
+}
+
+.genre-button.active {
+    background-color: #ff0048;
+    color: #fff;
+}

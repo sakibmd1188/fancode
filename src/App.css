@@ -1,0 +1,88 @@
+/* Existing CSS */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  background-color: pink;
+}
+
+/* New Styles */
+
+.centered-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.movies-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movies-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.movie-card {
+  position: relative;
+  width: 18%; /* Show 5 cards in a row on laptops */
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+}
+
+.movie-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.movie-card:hover .movie-info {
+  opacity: 1;
+}
+
+.movie-info h3, .movie-info p {
+  margin: 0;
+}
+
+/* Larger screens */
+@media only screen and (max-width: 1200px) {
+  .movie-card {
+    width: 18%; /* Gradual decrease */
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .movie-card {
+    width: 18%;/* Gradual decrease */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .movie-card {
+    width: 18%; /* Full width for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .movie-card {
+    width: 44%; /* Full width for the smallest screens */
+  }
+}
