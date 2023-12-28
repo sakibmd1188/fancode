@@ -58,6 +58,7 @@ const MovieList = ({ active, genreId }) => {
                 {movies.map(({ year, movies }) => (
                     <div key={year}>
                         <h2 style={{ color: 'red' }}>Movies from {year}</h2>
+
                         <div className="movies-list">
                             {movies.map((movie, index) => {
                                 const includesGenreId = movie.genre_ids.some(id => genreId.includes(id));

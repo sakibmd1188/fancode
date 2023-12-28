@@ -9,13 +9,19 @@
     padding: 10px 20px;
 }
 
-.logo {
-    font-size: 24px;
-    margin: 0;
-    font-weight: bold;
+.user-icon {
+    font-size: 28px; /* Increase icon size */
+    color: #fff; /* Set icon color */
+    margin-left: auto; /* Adjust the positioning */
+    display: flex;
+    align-items: center; /* Center icon vertically */
 }
 
-.logo:hover {
+.user-icon:hover {
     cursor: pointer;
     color: #ff4500; /* Change color on hover */
+}
+
+.user-icon .icon {
+    margin-right: 5px; /* Add space between icon and text */
 }

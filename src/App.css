@@ -5,7 +5,7 @@ body {
 }
 
 .App {
-  background-color: pink;
+  background-color: black;
 }
 
 /* New Styles */
@@ -16,20 +16,20 @@ body {
 }
 
 .movies-container {
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
 }
 
 .movies-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
 .movie-card {
   position: relative;
-  width: 18%; /* Show 5 cards in a row on laptops */
-  margin: 10px;
+  margin:10px 0px 0px 35px;
+  width: 14%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -58,31 +58,36 @@ body {
   opacity: 1;
 }
 
-.movie-info h3, .movie-info p {
+.movie-info h3,
+.movie-info p {
   margin: 0;
 }
 
 /* Larger screens */
 @media only screen and (max-width: 1200px) {
   .movie-card {
-    width: 18%; /* Gradual decrease */
+    width: 18%;
+    /* Gradual decrease */
   }
 }
 
 @media only screen and (max-width: 992px) {
   .movie-card {
-    width: 18%;/* Gradual decrease */
+    width: 18%;
+    /* Gradual decrease */
   }
 }
 
 @media only screen and (max-width: 768px) {
   .movie-card {
-    width: 18%; /* Full width for smaller screens */
+    width: 18%;
+    /* Full width for smaller screens */
   }
 }
 
 @media only screen and (max-width: 420px) {
   .movie-card {
-    width: 44%; /* Full width for the smallest screens */
+    width: 44%;
+    /* Full width for the smallest screens */
   }
 }

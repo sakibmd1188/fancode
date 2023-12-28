@@ -66,16 +66,15 @@ const Genre = () => {
 
   return (
     <div className="genre-container">
-      <h1>Movie Genres</h1>
+      <h1 style={{ color: "white" }}>Movie Genres</h1>
       {error && <p>{error}</p>}
       <div className="genre-list">
         {genres.length > 0 &&
           genres.map((genre) => (
             <button
               key={genre.id}
-              className={`genre-button ${
-                activeGenres.includes(genre.name) ? "active" : ""
-              }`}
+              className={`genre-button ${activeGenres.includes(genre.name) ? "active" : ""
+                }`}
               onClick={() => handleGenreClick(genre.id, genre.name)}
               onDoubleClick={handleGenreDoubleClick}
             >
